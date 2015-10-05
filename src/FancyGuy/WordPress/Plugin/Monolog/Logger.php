@@ -45,7 +45,7 @@ class Logger {
 		$args = wp_parse_args($args, $defaults);
 
 		$this->logger = new \Monolog\Logger($args['name']);
-		$this->logger->pushHandler(new Monolog\Handler\StreamHandler($args['path'], $args['level']));
+		$this->logger->pushHandler(new \Monolog\Handler\StreamHandler($args['path'], $args['level']));
 	}
 
 }
